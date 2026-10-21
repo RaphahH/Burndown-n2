@@ -56,7 +56,7 @@
   .big{font-size:56px;font-weight:700;color:var(--cyan-lt);text-shadow:0 0 18px rgba(25,181,240,.4);line-height:1.1;margin-top:10px}
   .big small{font-size:16px;color:var(--muted);font-weight:500;margin-left:8px}
   .bar{height:14px;margin-top:16px;border:1px solid var(--line);border-radius:999px;background:#061522;overflow:hidden}
-  .bar > div{height:100%;width:28.57%;min-width:2px;border-radius:inherit;background:linear-gradient(90deg,var(--cyan),var(--cyan-lt));box-shadow:var(--glow)}
+  .bar > div{height:100%;width:65.71%;min-width:2px;border-radius:inherit;background:linear-gradient(90deg,var(--cyan),var(--cyan-lt));box-shadow:var(--glow)}
   .days{display:grid;gap:8px;margin-top:14px}
   .day{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:rgba(7,26,43,.6)}
   .day-name{font-weight:600}
@@ -82,24 +82,24 @@
   <div class="eyebrow">Service desk analytics</div>
   <h1>Visão geral da sprint</h1>
   <p class="sub">Acompanhamento de entregas e meta semanal.</p>
-  <div class="meta">Sprint atual · Sexta a quinta &nbsp;|&nbsp; Fonte: Burndown_Semanal.xls &nbsp;|&nbsp; Gerado em 19/10/2026 18:47</div>
+  <div class="meta">Sprint atual · Sexta a quinta &nbsp;|&nbsp; Fonte: Burndown_Semanal.xls &nbsp;|&nbsp; Gerado em 21/10/2026 08:20</div>
 
   <div class="grid kpis">
     <div class="card"><h3>Escopo planejado</h3><div class="kpi">35</div><div class="note">chamados na sprint · meta de 7 por dia</div></div>
-    <div class="card"><h3>Entregas concluídas</h3><div class="kpi">10</div><div class="note">29% do escopo concluído</div></div>
-    <div class="card"><h3>Restantes</h3><div class="kpi">25</div><div class="note">chamados restantes</div></div>
-    <div class="card"><h3>Ritmo vs. meta</h3><div class="kpi">−4</div><div class="note">chamados abaixo da meta acumulada</div></div>
+    <div class="card"><h3>Entregas concluídas</h3><div class="kpi">23</div><div class="note">66% do escopo concluído</div></div>
+    <div class="card"><h3>Restantes</h3><div class="kpi">12</div><div class="note">chamados restantes</div></div>
+    <div class="card"><h3>Ritmo vs. meta</h3><div class="kpi">+2</div><div class="note">chamados acima da meta acumulada</div></div>
   </div>
 
   <div class="grid two">
     <div class="card">
       <div class="head"><div><h2>Entregas versus meta</h2>
         <div class="note">Entregas de cada dia · meta de 7 por dia</div></div>
-        <span class="chip">Meta 7/dia · 35/semana &nbsp; <b>10 / 35</b></span></div>
+        <span class="chip">Meta 7/dia · 35/semana &nbsp; <b>23 / 35</b></span></div>
       <div class="stats">
         <div class="stat"><div class="lbl">Planejados</div><strong>35</strong></div>
-        <div class="stat"><div class="lbl">Concluídos</div><strong>10</strong></div>
-        <div class="stat"><div class="lbl">Restantes</div><strong>25</strong></div>
+        <div class="stat"><div class="lbl">Concluídos</div><strong>23</strong></div>
+        <div class="stat"><div class="lbl">Restantes</div><strong>12</strong></div>
       </div>
       <div class="chartbox"><canvas id="c_burn"></canvas></div>
     </div>
@@ -108,16 +108,16 @@
       <div class="head">
         <div><h2>Atingimento da meta</h2>
           <div class="note">Progresso sobre o escopo planejado</div></div>
-        <span class="pill lg red" title="10 entregues de 14 esperados até aqui (71% da meta acumulada)"><span class="ico">🔴</span>sinal vermelho</span>
+        <span class="pill lg gold" title="23 entregues de 21 esperados até aqui (110% da meta acumulada)"><span class="ico">🌟</span>muito bom</span>
       </div>
-      <div class="big">29%<small>concluído</small></div>
+      <div class="big">66%<small>concluído</small></div>
       <div style="margin-top:14px"><strong style="color:#eaf9ff">Progresso da meta</strong></div>
-      <div class="note">10 de 35 chamados concluídos até segunda-feira.</div>
+      <div class="note">23 de 35 chamados concluídos até terça-feira.</div>
       <div class="bar"><div></div></div>
       <div class="stats dois">
         <div class="stat"><div class="lbl">Planejados</div><strong>35</strong></div>
-        <div class="stat"><div class="lbl">Concluídos</div><strong>10</strong></div>
-        <div class="stat"><div class="lbl">Restantes</div><strong>25</strong></div>
+        <div class="stat"><div class="lbl">Concluídos</div><strong>23</strong></div>
+        <div class="stat"><div class="lbl">Restantes</div><strong>12</strong></div>
       </div>
     </div>
   </div>
@@ -126,7 +126,7 @@
     <div class="card">
       <div class="head"><div><h2>Crescimento das entregas</h2>
         <div class="note">Entregas acumuladas por dia · meta de 7 por dia</div></div>
-        <span class="chip">Meta 7/dia · 35/semana &nbsp; <b>10 / 35</b></span></div>
+        <span class="chip">Meta 7/dia · 35/semana &nbsp; <b>23 / 35</b></span></div>
       <div class="chartbox"><canvas id="c_ent"></canvas></div>
     </div>
 
@@ -136,9 +136,10 @@
       <div class="days">
 <div class="day"><div><span class="day-name">Sexta</span></div><div class="day-val">+5</div><div class="day-acc">5 acumulado</div></div>
 <div class="day"><div><span class="day-name">Segunda</span></div><div class="day-val">+5</div><div class="day-acc">10 acumulado</div></div>
+<div class="day"><div><span class="day-name">Terça</span></div><div class="day-val">+13</div><div class="day-acc">23 acumulado</div></div>
       </div>
-      <div class="ritmo"><span class="pill red"><span class="ico">🔴</span>Abaixo do ritmo ideal</span> <span class="tend">— ritmo estável</span></div>
-      <div class="foot-note">* Comparação com a meta acumulada até segunda-feira, considerando 2 de 5 dias registrados.</div>
+      <div class="ritmo"><span class="pill pink"><span class="ico">🚀</span>Acima do ritmo ideal</span> <span class="tend">↑ aceleração</span></div>
+      <div class="foot-note">* Comparação com a meta acumulada até terça-feira, considerando 3 de 5 dias registrados.</div>
     </div>
   </div>
 
@@ -149,6 +150,7 @@
       <tbody>
 <tr><td>Sexta</td><td>5</td><td>5</td><td>30</td></tr>
 <tr><td>Segunda</td><td>5</td><td>10</td><td>25</td></tr>
+<tr><td>Terça</td><td>13</td><td>23</td><td>12</td></tr>
       </tbody>
     </table>
   </div>
@@ -157,7 +159,7 @@
 </div>
 
 <script>
-const D = {"labels": ["Início", "Sex", "Seg", "Ter", "Qua", "Qui"], "restante": [35.0, 30.0, 25.0, null, null, null], "idealRestante": [35.0, 28.0, 21.0, 14.0, 7.0, 0.0], "labelsDia": ["Sex", "Seg", "Ter", "Qua", "Qui"], "entregasDia": [5.0, 5.0, null, null, null], "metaDia": [7.0, 7.0, 7.0, 7.0, 7.0], "metaLabel": "Meta diária (7)"};
+const D = {"labels": ["Início", "Sex", "Seg", "Ter", "Qua", "Qui"], "restante": [35.0, 30.0, 25.0, 12.0, null, null], "idealRestante": [35.0, 28.0, 21.0, 14.0, 7.0, 0.0], "labelsDia": ["Sex", "Seg", "Ter", "Qua", "Qui"], "entregasDia": [5.0, 5.0, 13.0, null, null], "metaDia": [7.0, 7.0, 7.0, 7.0, 7.0], "metaLabel": "Meta diária (7)"};
 const C = {cyan:'#19b5f0', cyanLt:'#5fd6ff', grid:'rgba(25,181,240,.12)', text:'#7ea9c0'};
 
 Chart.defaults.color = C.text;
